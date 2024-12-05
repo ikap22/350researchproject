@@ -5,14 +5,14 @@ import "./topStyles.css";
 
 // Example of company data for the dropdown
 const companies = [
-  { id: "tech-innovations", name: "Tech Innovations Ltd." },
-  { id: "creative-designs", name: "Creative Designs Co." },
-  { id: "global-enterprises", name: "Global Enterprises" },
-  { id: "smart-solutions", name: "Smart Solutions" },
-  { id: "digital-creations", name: "Digital Creations" },
-  { id: "blue-tech", name: "Blue Tech Ltd." },
-  { id: "eco-industries", name: "Eco Industries" },
-  { id: "next-gen-systems", name: "Next Gen Systems" },
+  { id: "tech-innovations", name: "Netflix" },
+  { id: "creative-designs", name: "WeWork" },
+  { id: "global-enterprises", name: "DuckDuckGo" },
+  { id: "smart-solutions", name: "Crowdmix" },
+  { id: "digital-creations", name: "Instagram" },
+  { id: "blue-tech", name: "Kiko" },
+  { id: "eco-industries", name: "Stripe" },
+  { id: "next-gen-systems", name: "Zume" },
 ];
 
 function TopNav() {
@@ -25,7 +25,7 @@ function TopNav() {
           <img height={100} src={logo} alt="Logo" />
           <p className="name">Team Tim</p>
         </div>
-        <div className="nav-right">
+        <div className="nav-center">
           <button>
             <Link to="/">Introduction</Link>
           </button>
@@ -34,7 +34,9 @@ function TopNav() {
             onMouseEnter={() => setShowDropdown(true)}
             onMouseLeave={() => setShowDropdown(false)}
           >
-            <button className="hoola">Our Companies</button>
+            <button>
+              <Link to="#">Companies</Link>
+            </button>
             {showDropdown && (
               <div className="dropdown-content">
                 {companies.map((company) => (
