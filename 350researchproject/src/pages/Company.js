@@ -1,33 +1,20 @@
 import React from "react";
+import "./companyStyles.css"; // Import the CSS file
 
-
-function Company({companyName, history, growth, revenue, size, productPerformance, analysis, citations,}){
-    return(
-        <>
-            <div className="name">
-                <h1>{companyName}</h1>
-            </div>
-            <div className="section">
-                <h2>History</h2>
-                <p>{history}</p>
-            </div>
-            <div className="section">
-                <h2> Financial Statistic</h2>
-                <p>Growth: {growth}</p>
-                <p>Revenue: {revenue}</p>
-                <p>Size: {size}</p>
-                <p>Perfeormance: {productPerformance}</p>
-            </div>
-            <div className="section">
-                <h2>Analysis</h2>
-                <p>{analysis}</p>
-            </div>
-            <div className="section">
-                <h2>Citations</h2>
-                <p>{citations}</p>
-            </div>
-        </>
-    )
+function Company({ companyName, history, growth, revenue, size, productPerformance, analysis, additionalReadings }) {
+  return (
+    <div className="company-container">
+      <h1 className="company-name">{companyName}</h1>
+      <hr className="company-hr" />
+      <p><strong>History:</strong> {history}</p>
+      <p><strong>Growth:</strong> {growth}</p>
+      <p><strong>Revenue:</strong> {revenue}</p>
+      <p><strong>Size:</strong> {size}</p>
+      <p><strong>Product Performance:</strong> {productPerformance}</p>
+      <p><strong>Analysis:</strong> {analysis}</p>
+      <p><strong>Additional Readings:</strong> <span dangerouslySetInnerHTML={{ __html: additionalReadings }} /></p>
+    </div>
+  );
 }
 
 export default Company;

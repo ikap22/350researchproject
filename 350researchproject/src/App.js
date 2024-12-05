@@ -8,17 +8,18 @@ import { useParams } from "react-router-dom";
 
 // Example company data, JSON format, AI Gen
 const companies = {
-  "tech-innovations": {
+  "netflix": {
     companyName: "Netflix",
-    history: "Founded in 1997, Netflix is a streaming service.",
-    growth: "30%",
-    revenue: "$25B",
-    size: "7000 employees",
-    productPerformance: "Excellent",
-    analysis: "Streaming is the future of entertainment.",
-    citations: "Streaming Journal 2023",
+    history: "Netflix was founded in 1997 as a DVD rental-by-mail service. It pivoted to streaming in 2007 and began producing original content in 2013.",
+    growth: "Rapid global expansion with over 230 million subscribers as of 2023. Transitioned into a leader in the streaming industry and content production",
+    revenue: "Generated $31.6 billion in revenue in 2023, up from $1.2 billion in 2007.",
+    size: "7Employs approximately 12,000 people worldwide, with operations in 190 countries.",
+    productPerformance: " Original series like Stranger Things and The Crown have been critical and commercial successes, increasing subscriber retention",
+    analysis: "Netflix’s success is largely attributed to its forward-thinking management practices. Under Reed Hastings, the company embraced a culture of freedom and responsibility, empowering employees to make decisions and drive innovation. Strategic pivots, like transitioning from DVD rentals to streaming and investing heavily in original content, demonstrated management’s ability to anticipate and adapt to market trends. The leadership’s reliance on data analytics further strengthened decision-making, enabling personalized viewer experiences and optimizing content investments. By fostering a culture of autonomy, long-term thinking, and data-driven strategies, Netflix established itself as a leader in the entertainment industry.",
+    additionalReadings: '<a href="https://www.cbsnews.com/news/how-netflix-reinvented-entertainment-and-corporate-culture/" target="_blank" rel="noopener noreferrer">How Netflix Reinvented Entertainment and Corporate Culture</a>'
+
   },
-  "creative-designs": {
+  "wework": {
     companyName: "WeWork",
     history: "Started in 2010, WeWork provides shared workspaces.",
     growth: "20%",
@@ -26,9 +27,9 @@ const companies = {
     size: "5000 employees",
     productPerformance: "Good",
     analysis: "Co-working spaces are on the rise.",
-    citations: "Workspace Magazine 2023",
+    additionalReadings: "Workspace Magazine 2023",
   },
-  "global-enterprises": {
+  "duckduckgo": {
     companyName: "DuckDuckGo",
     history: "Founded in 2008, DuckDuckGo is a search engine.",
     growth: "10%",
@@ -36,9 +37,9 @@ const companies = {
     size: "200 employees",
     productPerformance: "Outstanding",
     analysis: "Privacy-focused search engines are gaining popularity.",
-    citations: "Search Engine World 2023",
+    additionalReadings: "Search Engine World 2023",
   },
-  "smart-solutions": {
+  "crowdmix": {
     companyName: "Crowdmix",
     history: "Founded in 2014, Crowdmix is a social media platform.",
     growth: "25%",
@@ -46,9 +47,9 @@ const companies = {
     size: "300 employees",
     productPerformance: "Good",
     analysis: "Social media continues to grow.",
-    citations: "Social Media Today 2023",
+    additionalReadings: "Social Media Today 2023",
   },
-  "digital-creations": {
+  "instagram": {
     companyName: "Instagram",
     history: "Founded in 2010, Instagram is a photo-sharing app.",
     growth: "35%",
@@ -56,9 +57,9 @@ const companies = {
     size: "1000 employees",
     productPerformance: "Excellent",
     analysis: "Photo-sharing apps are highly popular.",
-    citations: "Tech Journal 2023",
+    additionalReadings: "Tech Journal 2023",
   },
-  "blue-tech": {
+  "kiko": {
     companyName: "Kiko",
     history: "Founded in 2015, Kiko is a tech startup.",
     growth: "40%",
@@ -66,9 +67,9 @@ const companies = {
     size: "100 employees",
     productPerformance: "Good",
     analysis: "Tech startups are booming.",
-    citations: "Startup Magazine 2023",
+    additionalReadings: "Startup Magazine 2023",
   },
-  "eco-industries": {
+  "stripe": {
     companyName: "Stripe",
     history: "Founded in 2010, Stripe is a payment processing company.",
     growth: "50%",
@@ -76,9 +77,9 @@ const companies = {
     size: "3000 employees",
     productPerformance: "Outstanding",
     analysis: "Payment processing is crucial for e-commerce.",
-    citations: "Finance World 2023",
+    additionalReadings: "Finance World 2023",
   },
-  "next-gen-systems": {
+  "zume": {
     companyName: "Zume",
     history: "Founded in 2015, Zume is a robotics company.",
     growth: "45%",
@@ -86,7 +87,7 @@ const companies = {
     size: "500 employees",
     productPerformance: "Excellent",
     analysis: "Robotics is the future of manufacturing.",
-    citations: "Robotics Journal 2023",
+    additionalReadings: "Robotics Journal 2023",
   }
 };
 
@@ -127,7 +128,7 @@ function CompanyDetails() {
       size={company.size}
       productPerformance={company.productPerformance}
       analysis={company.analysis}
-      citations={company.citations}
+      additionalReadings={company.additionalReadings}
     />
   );
 }
