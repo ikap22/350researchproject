@@ -7,7 +7,7 @@ import Company from "./pages/Company";
 import { useParams } from "react-router-dom";
 
 const companies = {
-  "Netflix": {
+  "netflix": {
     companyName: "Netflix",
     history: "Netflix was founded in 1997 as a DVD rental-by-mail service. It pivoted to streaming in 2007 and began producing original content in 2013.",
     growth: "Rapid global expansion with over 230 million subscribers as of 2023. Transitioned into a leader in the streaming industry and content production.",
@@ -28,7 +28,7 @@ const companies = {
       "https://www.hbs.edu/faculty/Pages/item.aspx?num=56185"
     ]
   },
-  "WeWork": {
+  "wework": {
     companyName: "WeWork",
     history: "Founded in 2010 by Adam Neumann and Miguel McKelvey as a provider of shared workspaces. It grew quickly but struggled financially, leading to a failed IPO in 2019.",
     growth: "Expanded aggressively, reaching a valuation of $47 billion before its collapse in 2019. Overexpansion and high operational costs led to significant financial instability.",
@@ -47,7 +47,7 @@ const companies = {
       "https://www.newyorker.com/culture/culture-desk/the-rise-and-fall-of-wework"
     ]
   },
-  "DuckDuckGo": {
+  "duckduckgo": {
     companyName: "DuckDuckGo",
     history: "DuckDuckGo was created in 2008 as an alternative search engine, prioritizing user privacy and non-tracking ads.",
     growth: "The company has grown from 1 employee in 2011 to over 200 by 2024.",
@@ -61,7 +61,7 @@ const companies = {
       "https://webology.io/duckduckgo-stats-revenue-and-user-data/"
     ]
   },
-  "Crowdmix": {
+  "crowdmix": {
     companyName: "Crowdmix",
     history: "Crowdmix was founded in 2013, and promised a music streaming platform where people could listen to music together. The company spent millions in investor money, yet the app was never officially released. Crowdmix eventually filed for bankruptcy in 2016.",
     growth: "Crowdmix raised £14 million from investors in 2015. Their product grew to a staggering 0 users, as it was never released, nor was a prototype ever completed.",
@@ -75,7 +75,7 @@ const companies = {
       "https://www.businessinsider.in/A-leaked-document-shows-that-failed-music-startup-Crowdmix-was-burning-1632-million-per-month/articleshow/54348484.cms"
     ]
   },
-  "Kiko": {
+  "kiko": {
     companyName: "Kiko",
     history: "Founded in 2003 by Justin Kan and Emmett Shear, Kiko was an Ajax-style online calendar application. The application provided API integration with other websites and applications on the Internet. However, Kiko only lasted for 3 years before the founders decided to pivot due to competitive pressures and the challenges of monetizing a web-based calendar application at that time. In 2006, Kiko was sold on eBay for $258,100.",
     growth: "Initially, Kiko was well received for its friendly UI and innovative use of Ajax technology. However, the application struggled to maintain its user base due to competition from Google Calendar and lack of updates.",
@@ -91,7 +91,7 @@ const companies = {
       "https://www.crunchbase.com/organization/kiko"
     ]
   },
-  "Instagram": {
+  "instagram": {
     companyName: "Instagram",
     history: "Instagram was launched on October 6th, 2010 by Kevin Systrom. Instagram is a photo-sharing application allowing users to share their photos and apply filters to them. The application became popular and attracted millions of users leading to it being acquired by Meta in 2012.",
     growth: "Instagram has seen exponential growth since its launch. It reached 1 million users in two months, 10 million in a year, and 1 billion monthly active users by June 2018. The platform continues to grow, with over 2 billion monthly active users as of December 2021.",
@@ -105,7 +105,7 @@ const companies = {
       "https://www.spocket.co/statistics/statistics-instagram-earnings-and-revenue"
     ]
   },
-  "Stripe": {
+  "stripe": {
     companyName: "Stripe",
     history: "Stripe was founded in 2010 by brothers Patrick and John Collison in San Francisco, California. The company aimed to simplify online payments by providing a seamless way for businesses to accept payments through a few lines of code. Over the years, Stripe has grown into a global financial services company, offering a wide range of products for e-commerce businesses.",
     growth: "Stripe has expanded its services to over 50 countries.",
@@ -119,7 +119,7 @@ const companies = {
       "digitalenterprise.org/models/stripe/"
     ]
   },
-  "Zume": {
+  "zume": {
     companyName: "Zume",
     history: "Zume was founded in 2015 by Alex Garden and Julia Collins with the goal of revolutionizing pizza delivery using robots. The company aimed to automate the pizza-making process and deliver pizzas cooked in GPS-equipped automated ovens. Despite initial success and significant funding, Zume faced numerous challenges and eventually shut down in 2023.",
     growth: "Zume struggled to scale its operations and faced technological difficulties.",
@@ -172,7 +172,7 @@ function CompanyDetails() {
       size={company.size}
       productPerformance={company.productPerformance}
       analysis={company.analysis}
-      additionalReadings={company.additionalReadings}
+      citations={company.citations}
     />
   );
 }

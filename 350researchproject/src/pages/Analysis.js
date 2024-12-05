@@ -4,7 +4,7 @@ import "./pageStyles.css"
 
 function Analysis() {
   return (
-    <>
+    <div className="container">
       <h1>Analysis</h1>
       <hr />
       <p className="page-text"> Among all companies that are successful, there is a common trend of giving employees’ freedom to innovate and make decisions. Companies such as Netflix and Instagram highly encourage employees to make their own decisions and take ownership of their works. This led to Netflix and Instagram being able to introduce new features quickly. In addition, companies that have transparent communication between employees especially with the higher management are also found to be successful. DuckDuckGo and Stripe are prime examples of having a network structure where employees are treated as equal to their superiors. 
@@ -13,7 +13,7 @@ function Analysis() {
       </p>
       <p className="page-text"> Mismanagement was often the downfall of the tech companies researched. Many of their mistakes, such as lavish misspendings, improper internal structuring and cultures, and unfocused visions all could have been avoided. Though a company may be backed by hefty investments and promising features, management must be handled with care to avoid going under.
       </p>
-    </>
+    </div>
     )
 }
 
