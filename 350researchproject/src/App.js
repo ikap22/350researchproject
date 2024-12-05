@@ -1,48 +1,88 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TopNav from "./components/TopNav";
+import Analysis from "./pages/Analysis";
+import Team from "./pages/Team";
+import Home from "./pages/Home";
+import Company from "./pages/Company";
+import { useParams } from "react-router-dom";
 
-const companies = [
-  { id: 1, name: "TechCorp", industry: "Technology", keyFindings: "Leading in AI innovation" },
-  { id: 2, name: "EcoSolutions", industry: "Environmental", keyFindings: "Pioneering sustainable energy solutions" },
-  { id: 3, name: "HealthPlus", industry: "Healthcare", keyFindings: "Breakthrough in gene therapy" },
-  { id: 4, name: "FinanceHub", industry: "Finance", keyFindings: "Revolutionizing blockchain banking" },
-  { id: 5, name: "EduTech", industry: "Education", keyFindings: "Transforming online learning experiences" },
-  { id: 6, name: "SpaceX", industry: "Aerospace", keyFindings: "Advancing reusable rocket technology" },
-  { id: 7, name: "GreenFarms", industry: "Agriculture", keyFindings: "Innovating vertical farming techniques" },
-  { id: 8, name: "RoboWorks", industry: "Robotics", keyFindings: "Developing advanced humanoid robots" },
-  { id: 9, name: "VirtualReality", industry: "Entertainment", keyFindings: "Creating immersive VR experiences" },
-  { id: 10, name: "SecureNet", industry: "Cybersecurity", keyFindings: "Pioneering quantum encryption methods" },
-];
+// Example company data, JSON format, AI Gen
+const companies = {
+  // id : {info} Use as an example
+  "tech-innovations": {
+    companyName: "Tech Innovations Ltd.",
+    history: "Founded in 2010, we specialize in AI.",
+    growth: "20%",
+    revenue: "$50M",
+    size: "200 employees",
+    productPerformance: "Excellent",
+    analysis: "AI is the future of technology.",
+    citations: "AI Journal 2023",
+  },
+  "creative-designs": {
+    companyName: "Creative Designs Co.",
+    history: "Started in 2015, we provide top-tier graphic design.",
+    growth: "15%",
+    revenue: "$10M",
+    size: "50 employees",
+    productPerformance: "Good",
+    analysis: "Graphic design trends are evolving.",
+    citations: "Design Magazine 2023",
+  },
+  "global-enterprises": {
+    companyName: "Global Enterprises",
+    history: "Global leader in logistics since 2000.",
+    growth: "5%",
+    revenue: "$200M",
+    size: "1000 employees",
+    productPerformance: "Outstanding",
+    analysis: "Logistics is crucial for global trade.",
+    citations: "Logistics World 2023",
+  }
+};
 
-const contentDiv = document.getElementById('content');
-
-function showIntroPage() {
-  contentDiv.innerHTML = `
-      <p>Welcome to our presentation on the findings from our research on 10 innovative companies.
-      Click on a company name below to view its details.</p>
-      <div id="company-list"></div>
-  `;
-
-  const companyList = document.getElementById('company-list');
-  companies.forEach(company => {
-      const button = document.createElement('button');
-      button.textContent = company.name;
-      button.addEventListener('click', () => showCompanyPage(company));
-      companyList.appendChild(button);
-  });
-}
-
-function showCompanyPage(company) {
-  contentDiv.innerHTML = `
-      <div class="company-card">
-          <h2>${company.name}</h2>
-          <p><strong>Industry:</strong> ${company.industry}</p>
-          <p><strong>Key Findings:</strong> ${company.keyFindings}</p>
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <TopNav />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="analysis" element={<Analysis />} />
+            <Route path="team" element={<Team />} />
+            
+            {}
+            <Route path="company/:companyId" element={<CompanyDetails />} />
+          </Routes>
+        </main>
       </div>
-      <button id="back-button">Back to Home</button>
-  `;
-
-  document.getElementById('back-button').addEventListener('click', showIntroPage);
+    </BrowserRouter>
+  );
 }
 
-// Initialize the app
-showIntroPage();
+// This component will fetch and display company details dynamically based on the URL parameter
+function CompanyDetails() {
+  const { companyId } = useParams();  // Get the companyId from the URL
+  const company = companies[companyId];
 
+  if (!company) {
+    return <h2>Company not found</h2>;
+  }
+
+  return (
+    <Company
+      companyName={company.companyName}
+      history={company.history}
+      growth={company.growth}
+      revenue={company.revenue}
+      size={company.size}
+      productPerformance={company.productPerformance}
+      analysis={company.analysis}
+      citations={company.citations}
+    />
+  );
+}
+
+export default App;
