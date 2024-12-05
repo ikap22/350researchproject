@@ -2,8 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TopNav from "./components/TopNav";
 import Analysis from "./pages/Analysis";
-import Team from "./pages/Team";
-import Home from "./pages/Home";
+import Home from "./pages/Introduction";
 import Company from "./pages/Company";
 import { useParams } from "react-router-dom";
 
@@ -51,7 +50,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="analysis" element={<Analysis />} />
-            <Route path="team" element={<Team />} />
             
             {}
             <Route path="company/:companyId" element={<CompanyDetails />} />

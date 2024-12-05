@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #BCB88A;
+    background-color: #45accf;
     padding: 10px 20px;
 }
 
@@ -17,7 +17,7 @@
 }
 .nav-right a{
     margin-left: 20px;
-    color: #23214c;
+    color: #2a23a9;
     text-decoration: none;
     font-weight: bold;
 }

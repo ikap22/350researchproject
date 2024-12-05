@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import logo from "../image/TeamTimLogo.png";
 import "./topStyles.css";
@@ -16,6 +16,8 @@ const companies = [
 ];
 
 function TopNav() {
+  const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <>
       <nav className="navbar">
@@ -24,27 +26,28 @@ function TopNav() {
           <p className="name">Team Tim</p>
         </div>
         <div className="nav-right">
-          <div className="dropdown">
-            <button className="dropbtn">Menu</button>
-            <div className="dropdown-content">
-              <Link to="/">Home</Link>
-              <Link to="/analysis">Analysis</Link>
-              <Link to="/team">OUR Team</Link>
-
-              {/* Companies Dropdown */}
-              <div className="inner">
-                <button className="companydrop">Companies</button>
-                <div className="companies">
-                  {/* Dynamically generate company links */}
-                  {companies.map((company) => (
-                    <Link key={company.id} to={`/company/${company.id}`}>
-                      {company.name}
-                    </Link>
-                  ))}
-                </div>
+          <button>
+            <Link to="/">Introduction</Link>
+          </button>
+          <div
+            className="dropdown"
+            onMouseEnter={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
+          >
+            <button className="hoola">Our Companies</button>
+            {showDropdown && (
+              <div className="dropdown-content">
+                {companies.map((company) => (
+                  <Link key={company.id} to={`/company/${company.id}`}>
+                    {company.name}
+                  </Link>
+                ))}
               </div>
-            </div>
+            )}
           </div>
+          <button>
+            <Link to="/analysis">Analysis</Link>
+          </button>
         </div>
       </nav>
       <Outlet />
