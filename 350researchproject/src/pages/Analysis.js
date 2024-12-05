@@ -1,9 +1,17 @@
 // Analysis.js
 import React from "react";
 import "./pageStyles.css"
+import ads from '../image/ad.png'
 
 function Analysis() {
   return (
+    <div className="parent">
+    <div className="ads">
+            <img src={ads}
+            width={200}
+            height={500}
+            alt="ads"/>
+    </div>
     <div className="container">
       <h1>Analysis</h1>
       <hr />
@@ -13,6 +21,7 @@ function Analysis() {
       </p>
       <p className="page-text"> Mismanagement was often the downfall of the tech companies researched. Many of their mistakes, such as lavish misspendings, improper internal structuring and cultures, and unfocused visions all could have been avoided. Though a company may be backed by hefty investments and promising features, management must be handled with care to avoid going under.
       </p>
+    </div>
     </div>
     )
 }

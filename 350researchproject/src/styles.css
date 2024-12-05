@@ -10,7 +10,9 @@ h1 {
     color: #000000;
 }
 
-
+.parent{
+    display: flex;
+}
 p.page-text {
     text-align: center;
     font-weight: bold;
@@ -23,8 +25,8 @@ p.page-text {
 .container{
     width: 1200px;
     border-radius: 25px;
-    margin:auto;
     background-color: #d3f4f9;
+    margin-left: 20px;
 }
 
 button {
