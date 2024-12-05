@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/350researchproject/static/css/main.bd4f74de.css",
+    "main.js": "/350researchproject/static/js/main.450250df.js",
+    "static/media/TeamTimLogo.png": "/350researchproject/static/media/TeamTimLogo.72c862a481a56c777a69.png",
+    "index.html": "/350researchproject/index.html",
+    "main.bd4f74de.css.map": "/350researchproject/static/css/main.bd4f74de.css.map",
+    "main.450250df.js.map": "/350researchproject/static/js/main.450250df.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd4f74de.css",
+    "static/js/main.450250df.js"
+  ]
+}
