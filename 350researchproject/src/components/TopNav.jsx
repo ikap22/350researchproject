@@ -5,14 +5,14 @@ import "./topStyles.css";
 
 // Example of company data for the dropdown
 const companies = [
-  { id: "tech-innovations", name: "Tech Innovations Ltd." },
-  { id: "creative-designs", name: "Creative Designs Co." },
-  { id: "global-enterprises", name: "Global Enterprises" },
-  { id: "smart-solutions", name: "Smart Solutions" },
-  { id: "digital-creations", name: "Digital Creations" },
-  { id: "blue-tech", name: "Blue Tech Ltd." },
-  { id: "eco-industries", name: "Eco Industries" },
-  { id: "next-gen-systems", name: "Next Gen Systems" },
+  { id: "Netflix", name: "Netflix" },
+  { id: "WeWork", name: "WeWork" },
+  { id: "DuckDuckGo", name: "DuckDuckGo" },
+  { id: "Crowdmix", name: "Crowdmix" },
+  { id: "Instagram", name: "Instagram" },
+  { id: "Kiko", name: "Kiko" },
+  { id: "Stripe", name: "Stripe" },
+  { id: "Zume", name: "Zume"}
 ];
 
 function TopNav() {

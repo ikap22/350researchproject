@@ -1,0 +1,23 @@
+.pageContent{
+    width: 1200px;
+    border-radius: 25px;
+    margin:auto;
+    background-color: #bc9f8a;
+}
+body{
+    background-color: #a7bc8a;
+}
+
+.section {
+    padding: 20px; 
+
+  }
+  
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; 
+    background-color: #8a8ebc;
+    text-align: center; 
+    position: relative; 
+  }
