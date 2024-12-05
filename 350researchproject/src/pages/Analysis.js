@@ -1,5 +1,6 @@
 // Analysis.js
 import React from "react";
+import "./pageStyles.css"
 
 function Analysis() {
   return (
