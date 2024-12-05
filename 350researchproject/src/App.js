@@ -15,7 +15,7 @@ const companies = {
     revenue: "Generated $31.6 billion in revenue in 2023, up from $1.2 billion in 2007.",
     size: "Employs approximately 12,000 people worldwide, with operations in 190 countries.",
     productPerformance: "Original series like Stranger Things and The Crown have been critical and commercial successes, bolstering subscriber retention.",
-    analysis: "Netflix’s success is attributed to its innovative management style, focus on employee empowerment, and strategic agility. The company capitalized on emerging technology and consumer trends, using data to deliver personalized experiences.",
+    analysis: "Netflix’s success is largely attributed to its forward-thinking management practices. Under Reed Hastings, the company embraced a culture of freedom and responsibility, empowering employees to make decisions and drive innovation. Strategic pivots, like transitioning from DVD rentals to streaming and investing heavily in original content, demonstrated management’s ability to anticipate and adapt to market trends. The leadership’s reliance on data analytics further strengthened decision-making, enabling personalized viewer experiences and optimizing content investments. By fostering a culture of autonomy, long-term thinking, and data-driven strategies, Netflix established itself as a leader in the entertainment industry.",
     citations: [
       "https://www.cbsnews.com/news/how-netflix-reinvented-entertainment-and-corporate-culture/",
       "https://www.rancord.org/netflix-inc-organizational-culture-hrm-strategic-implications",
